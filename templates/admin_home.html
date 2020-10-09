@@ -1,0 +1,83 @@
+<style>
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+body {
+  background-color: lightblue;
+}
+</style>
+<header>
+Admin page
+</header>
+
+
+
+
+
+<br>
+<br>
+<br>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+ 
+<div class="container">
+  
+  <div class="card-columns">
+    <div class="card ">
+      <div class="card-body text-center">
+        <p class="card-text">clint section</p>
+        <button type="button" class="btn btn">
+    <a href="{% url 'adminclint' %}">
+        Create Clint
+    </a>
+</button>
+<marquee behavior="scroll" direction="left">*NOTE: Check clint user list (django-admin/user)section</marquee>
+
+      </div>
+    </div>
+    <div class="card ">
+      <div class="card-body text-center">
+        <p class="card-text">service provider section</p>
+         <button type="button" class="btn"> 
+         <a href="{% url 'servicecreate' %}" >create services</a>
+         </button>
+
+
+        <button type="button" class ="btn " >
+    <a href="{% url 'servicepro' %}">
+        ADD Services
+    </a>
+</button>
+<button type="button" class ="btn " >
+    <a href="{% url 'show1' %}">
+        show Service
+    </a>
+</button>
+      </div>
+    </div>
+</div>
+    </br>
+
+</br>
+</br>
+</br>
+    <a href ="{% url 'logout' %}">LOGOUT</a>
+
+
+
+
+
+
+

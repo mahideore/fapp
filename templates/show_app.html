@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--<body>-->
+{% if s %}
+    <h2> Client list create</h2>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--</head>-->
+
+    <body style="background-color:white;">
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in st %}
+                    <tr>
+                        <td>{{s.first_name}}</td>
+                        <td>{{s.last_name}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>first</th>
+                    <th>lasr</th>
+                </tr>
+            </thead>
+        </table>
+        <b> no data to display </b>
+    </div>
+{% endif %}
